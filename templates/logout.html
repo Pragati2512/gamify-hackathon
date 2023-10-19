@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block title %} Optum - User Profile {% endblock title %}
+
+{% block body %}
+
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9 col-md-12">
+              <div class="card">
+                <div class="card-body table-responsive"> <br>
+                   You have been logged out of the Application! <br>
+                   Please <a href="{% url 'home:logout' %}"> SignIn </a> to Continue.
+                   <br>
+                   <br>
+                   <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}

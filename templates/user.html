@@ -1,0 +1,178 @@
+{% extends 'index.html' %}
+
+{% block title %} Optum - User Profile {% endblock title %}
+
+{% block body %}
+
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Profile</h4>
+                  <p class="card-category">Complete your profile</p>
+                </div>
+                <div class="card-body">
+                  <form action="" method="post">
+                            {% csrf_token %}
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">First Name</label>
+                          {{ field.errors }}
+                          <input type="text" class="form-control" name="f_name">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Last Name</label>
+                          {{ field.errors }}
+                          <input type="text" class="form-control" name="l_name">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Date of Birth</label> <br>
+                          {{ field.errors }}
+                          <input type="date" class="form-control" name="dob">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Gender</label> <br>
+                          {{ field.errors }}
+                          <select class="form-control" required name="gender">
+                                                            <option value="Male"> Male </option>
+                                                            <option value="Female"> Female </option>
+                                                            <option value="Secret"> Secret </option>
+                          </select>
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                   <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"> Email ID</label>
+                          {{ field.errors }}
+                          <input type="text" class="form-control" name="email">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Contact Number</label>
+                          {{ field.errors }}
+                          <input type="number" class="form-control" name="phone">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Height(in cms)</label>
+                          {{ field.errors }}
+                          <input type="number" class="form-control" name="height">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Weight(in kgs)</label>
+                          {{ field.errors }}
+                          <input type="number" class="form-control" name="weight">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+
+<br>
+<h4>Emergency Details</h4>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Emergengency Contact Person</label>
+                          {{ field.errors }}
+                          <input type="text" class="form-control" name="emer_name" >
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"> Email ID</label>
+                          {{ field.errors }}
+                          <input type="email" class="form-control" name="emer_email">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Contact Number</label>
+                          {{ field.errors }}
+                          <input type="number" class="form-control" name="emer_phone">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Relation with User</label>
+                          {{ field.errors }}
+                          <input type="text" class="form-control" name="emer_relation">
+                          {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <br>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="javascript:;">
+                    <img class="img" src="/static/assets/img/dp.jpeg" />
+                  </a>
+                </div>
+                <div class="card-body">
+
+                  <h4 class="card-title"> {{ prsn.f_name }} </h4>
+                  <p class="card-description">
+                      Valid User
+                  </p>
+                  <!-- a href="javascript:;" class="btn btn-primary btn-round">Follow</a -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+{% endblock %}

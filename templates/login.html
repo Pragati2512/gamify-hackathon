@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+
+
+{% block body %}
+
+
+      <div class="content">
+        <div class="container-fluid">
+        <form action="" method="post">
+            {% csrf_token %}
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Login</h4>
+                  <p class="card-category">Please enter your username and phone number as password</p>
+                </div>
+                <br>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">UserName</label>
+                          <input type="text" class="form-control" name="username" >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Phone Number</label>
+                            {{ field.errors }}
+                              <input type="text" class="form-control" name="password" >
+                            {{ field.help_text }}
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </form>
+        </div>
+      </div>
+
+{% endblock %}

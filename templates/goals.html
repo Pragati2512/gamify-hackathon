@@ -1,0 +1,298 @@
+{% extends 'index.html' %}
+
+{% block title %} User Goals {% endblock title %}
+
+{% block body %}
+
+      <div class="content">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-9 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <!-- span class="nav-tabs-title">Goals:</span -->
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#messages" data-toggle="tab">
+                            <i class="material-icons">trending_up</i> Goals
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#profile" data-toggle="tab">
+                            <i class="material-icons"> whatshot </i> Actions
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <!-- TAB PANE - Rewards -->
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons"> attach_money </i> Rewards
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+
+                        <!-- TAB PANE - Goals - id - messages -->
+
+                    <div class="tab-pane active" id="messages">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+
+                            </td>
+                            <td>
+                            <span style="font-size: large;"> <b>Continuos BP Monitoring</b> </span>
+
+                            <div id="goalInfo1" style="display:none;">
+                            <br> This helps to rule out anomalies,leading to the better ongoing management of current condition.
+                            </div>
+
+                            </td>
+
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Click here to know more" class="btn btn-info btn-link btn-sm" onclick="myFunction1()">
+                                <i class="material-icons">info_outline</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>
+                            <span style="font-size: large;"> Medication adherence </span>
+                            <div id="goalInfo2" style="display:none;">
+
+                            <br> Enabling this goal will help you with continuous medication and app will share reminders and notifiications according to the action set.
+                            </div>
+
+                            </td>
+
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Click here to know more" class="btn btn-info btn-link btn-sm" onclick="myFunction2()">
+                                <i class="material-icons">info</i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>
+                            <span style="font-size: large;"> Exercise Monitoring </span>
+
+                            <div id="goalInfo3" style="display:none;">
+
+                            </div>
+
+                            </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Click here to know more" class="btn btn-info btn-link btn-sm" onclick="myFunction3()">
+                                <i class="material-icons">info</i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>
+                            <span style="font-size: large;"> Exercise Monitoring </span>
+
+                            <div id="goalInfo3" style="display:none;">
+
+                            <br> Regular exercise has been shown to help boost energy levels and enhance your mood.Few steps a day keeps doctors away.
+                            </div>
+
+                            </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Click here to know more" class="btn btn-info btn-link btn-sm" onclick="myFunction3()">
+                                <i class="material-icons">info</i>
+                              </button>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                        <!-- TAB PANE - Actions - id - messages -->
+
+                    <div class="tab-pane" id="profile">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+
+                            <td>  Wake up early  </td>
+
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">done_all</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>  </td>
+                            <td> Upload BP readings for the day  </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">done</i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>  </td>
+                            <td> Take 11 am medicine  </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">done</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>  </td>
+                            <td> Go to Gym and click Selfie  </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">done</i>
+                              </button>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                        <!-- TAB PANE - Rewards - id - settings -->
+
+                    <div class="tab-pane" id="settings">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+
+                              <!--div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div-->
+
+                            </td>
+                            <td>Each action completed will help you earn rewards</td>
+                            <!-- td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td -->
+                          </tr>
+
+                          <tr>
+                            <td>    </td>
+                            <td>100 points is equivalent to $1</td>
+                          </tr>
+
+                          <tr>
+                            <td>   </td>
+
+                            <td> You can redeem rewards @ <a href="https://uhg.corpmerchandise.com" target="_blank">UHG Store</a> </td>
+                          </tr>
+
+                          <tr>
+                            <td>    </td>
+                            <td>Uploading BP data earns you 10 points</td>
+                          </tr>
+                          <tr>
+                            <td>    </td>
+                            <td>Doing daily of 4000 steps help you earn 40 points</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}
+
+
+
+
+       {% block script %}
+  <script src="/static/assets/js/goals.js" type="text/javascript"></script>
+
+       {% endblock%}
+
+
+
+
+
+
+
